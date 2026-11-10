@@ -1,0 +1,31 @@
+:root {
+    --primary-color: #000080; /* Azul Ecotec */
+    --bg-color: #f4f7f6;
+    --text-color: #333;
+}
+
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-color); color: var(--text-color); margin: 0; padding: 20px; }
+.container { max-width: 800px; margin: 0 auto; background: white; padding: 25px; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+header h1 { text-align: center; color: var(--primary-color); margin-top: 0; }
+.dashboard { background: #eef2f5; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 20px; font-size: 1.1em; }
+.dashboard b { color: var(--primary-color); }
+
+.controls, .task-form { display: flex; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+input[type="text"], select, button { padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 16px; }
+input[type="text"] { flex: 1; min-width: 200px; }
+button { background-color: var(--primary-color); color: white; border: none; cursor: pointer; font-weight: bold; transition: 0.3s; }
+button:hover { background-color: #000050; }
+
+.task-list { list-style: none; padding: 0; }
+.task-item { display: flex; justify-content: space-between; align-items: center; padding: 15px; background: #fafafa; border: 1px solid #eee; margin-bottom: 10px; border-radius: 6px; transition: 0.2s;}
+.task-item.completed span { text-decoration: line-through; color: #888; }
+.task-actions button { padding: 6px 12px; margin-left: 5px; font-size: 14px; }
+.btn-delete { background-color: #dc3545; }
+.btn-delete:hover { background-color: #c82333; }
+.btn-toggle { background-color: #28a745; }
+.btn-toggle:hover { background-color: #218838; }
+
+.priority-badge { font-size: 12px; padding: 3px 8px; border-radius: 12px; color: white; margin-right: 10px;}
+.p-alta { background-color: #dc3545; }
+.p-media { background-color: #ffc107; color: black; }
+.p-baja { background-color: #17a2b8; }

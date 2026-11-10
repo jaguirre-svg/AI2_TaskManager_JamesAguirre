@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskManager - ECOTEC</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Gestión de Tareas</h1>
+            <!-- Panel de Métricas interactivo -->
+            <div id="dashboard" class="dashboard">
+                <span>Total: <b id="total-tasks">0</b></span> | 
+                <span>Pendientes: <b id="pending-tasks">0</b></span> | 
+                <span>Completadas: <b id="completed-tasks">0</b></span>
+            </div>
+        </header>
+
+        <main>
+            <!-- Controles: Búsqueda, Filtro y Ordenamiento -->
+            <section class="controls">
+                <input type="text" id="search-input" placeholder="Buscar tarea en tiempo real...">
+                <select id="filter-status">
+                    <option value="all">Todas</option>
+                    <option value="pending">Pendientes</option>
+                    <option value="completed">Completadas</option>
+                </select>
+                <select id="sort-priority">
+                    <option value="date">Ordenar por Fecha</option>
+                    <option value="priority">Ordenar por Prioridad</option>
+                </select>
+            </section>
+
+            <!-- Formulario para nueva tarea -->
+            <section class="task-form">
+                <input type="text" id="task-title" placeholder="Añadir una nueva tarea..." required>
+                <select id="task-priority">
+                    <option value="Alta">Alta</option>
+                    <option value="Media" selected>Media</option>
+                    <option value="Baja">Baja</option>
+                </select>
+                <button id="add-task-btn">Agregar Tarea</button>
+            </section>
+
+            <!-- Contenedor de la lista de tareas -->
+            <ul id="task-list" class="task-list">
+                <!-- Las tareas se inyectarán aquí mediante JavaScript -->
+            </ul>
+        </main>
+    </div>
+
+    <!-- Declaramos type="module" para usar la Arquitectura Modular ES6 (Opción A) -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
